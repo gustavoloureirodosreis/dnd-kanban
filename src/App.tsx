@@ -1,7 +1,8 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
-import { Container, Heading } from '@chakra-ui/react'
+import Column from './components/Column'
+import { Container, Heading, SimpleGrid } from '@chakra-ui/react'
+import { ColumnType } from './utils/enums'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,6 +20,12 @@ function App() {
         Welcome to DnD Kanban
       </Heading>
       <Container maxWidth="container.lg" px={4} py={10}>
+        <SimpleGrid columns={{ base: 1, md: 4 }} spacing={{ base: 16, md: 4 }}>
+          <Column column={ColumnType.TO_DO} />
+          <Column column={ColumnType.IN_PROGRESS} />
+          <Column column={ColumnType.BLOCKED} />
+          <Column column={ColumnType.COMPLETED} />
+        </SimpleGrid>
       </Container>
     </>
   )
