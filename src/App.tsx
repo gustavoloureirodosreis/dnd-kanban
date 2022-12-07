@@ -16,7 +16,7 @@ function App() {
         bgClip="text"
         mt={4}
       >
-        Welcome to React + TypeScript + Chakra UI
+        Welcome to DnD Kanban
       </Heading>
       <Container maxWidth="container.lg" px={4} py={10}>
       </Container>
